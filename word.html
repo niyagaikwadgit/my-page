@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Explore Konkan</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins', sans-serif;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      background:#fff8f0;
+      color:#333;
+      line-height:1.7;
+    }
+
+    /* HERO SECTION */
+
+    .hero{
+      height:100vh;
+      background:
+      linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+      url('https://media.istockphoto.com/id/1363828634/photo/beautiful-sunset-or-sunrise-with-colorful-sky-at-devghali-or-kasheli-beach.jpg?s=612x612&w=0&k=20&c=L3ryg-BYRq2vX8FWMxCc6VQ-BedSW3vrEKHAJnNo5j8=');
+
+      background-size:cover;
+      background-position:center;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      color:white;
+      padding:20px;
+    }
+
+    .hero-content h1{
+      font-size:65px;
+      margin-bottom:10px;
+      letter-spacing:2px;
+    }
+
+    .hero-content p{
+      font-size:22px;
+      margin-bottom:25px;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:12px 28px;
+      background:#ff7b00;
+      color:white;
+      text-decoration:none;
+      border-radius:30px;
+      font-size:18px;
+      transition:0.3s;
+      font-weight:600;
+    }
+
+    .btn:hover{
+      background:white;
+      color:#ff7b00;
+      transform:scale(1.05);
+    }
+
+    /* NAVBAR */
+
+    nav{
+      position:sticky;
+      top:0;
+      background:white;
+      box-shadow:0 2px 10px rgba(0,0,0,0.1);
+      z-index:1000;
+      padding:15px;
+      text-align:center;
+    }
+
+    nav a{
+      text-decoration:none;
+      color:#333;
+      margin:0 18px;
+      font-weight:500;
+      transition:0.3s;
+    }
+
+    nav a:hover{
+      color:#ff7b00;
+    }
+
+    /* SECTION */
+
+    section{
+      padding:70px 10%;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:40px;
+    }
+
+    .section-title h2{
+      font-size:38px;
+      color:#ff7b00;
+      margin-bottom:10px;
+    }
+
+    .section-title p{
+      color:#666;
+    }
+
+    /* ABOUT */
+
+    .about{
+      display:flex;
+      gap:40px;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+
+    .about img{
+      width:100%;
+      max-width:500px;
+      border-radius:20px;
+      box-shadow:0 10px 20px rgba(0,0,0,0.15);
+    }
+
+    .about-text{
+      flex:1;
+    }
+
+    .about-text h3{
+      margin-bottom:15px;
+      color:#222;
+      font-size:30px;
+    }
+
+    /* GALLERY */
+
+    .gallery{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
+    }
+
+    .gallery img{
+      width:100%;
+      height:250px;
+      object-fit:cover;
+      border-radius:18px;
+      transition:0.4s;
+      box-shadow:0 5px 15px rgba(0,0,0,0.15);
+    }
+
+    .gallery img:hover{
+      transform:scale(1.05);
+    }
+
+    /* CARDS */
+
+    .card-container{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
+    }
+
+    .card{
+      background:white;
+      padding:25px;
+      border-radius:18px;
+      box-shadow:0 5px 15px rgba(0,0,0,0.1);
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-8px);
+    }
+
+    .card h3{
+      color:#ff7b00;
+      margin-bottom:10px;
+    }
+
+    /* FOOTER */
+
+    footer{
+      background:#111827;
+      color:white;
+      text-align:center;
+      padding:25px;
+      margin-top:40px;
+    }
+
+    footer a{
+      color:#ffb347;
+      text-decoration:none;
+    }
+
+    /* RESPONSIVE */
+
+    @media(max-width:768px){
+
+      .hero-content h1{
+        font-size:42px;
+      }
+
+      .hero-content p{
+        font-size:18px;
+      }
+
+      nav a{
+        display:inline-block;
+        margin:10px;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- HERO SECTION -->
+
+  <div class="hero">
+    <div class="hero-content">
+      <h1>Explore Konkan</h1>
+      <p>Discover Beaches, Forts, Nature & Culture</p>
+      <a href="#about" class="btn">Explore Now</a>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#history">History</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#places">Places</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- ABOUT SECTION -->
+
+  <section id="about">
+
+    <div class="section-title">
+      <h2>About Konkan</h2>
+      <p>The coastal beauty of Maharashtra</p>
+    </div>
+
+    <div class="about">
+
+      <img src="https://media.istockphoto.com/id/1134425167/photo/nivti-rock-and-nivti-beach-sindhudurg-maharashtra-india.jpg?s=612x612&w=0&k=20&c=P_6GAvINSNxL0U8DpyZeacB6brEh4kS-KLZ5F-TLIPQ=">
+
+      <div class="about-text">
+        <h3>Nature's Paradise</h3>
+
+        <p>
+          Konkan is a beautiful coastal region located between the Arabian Sea and the Western Ghats. 
+          It is famous for its stunning beaches, coconut trees, seafood, forts, temples, and peaceful villages.
+        </p>
+
+        <p>
+          Districts like Ratnagiri, Sindhudurg, Raigad, Palghar,
+           and Thane make Konkan one of the most attractive tourist destinations in Maharashtra.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- HISTORY -->
+
+  <section id="history" style="background:#fff3e8;">
+
+    <div class="section-title">
+      <h2>History of Konkan</h2>
+      <p>A land with rich cultural heritage</p>
+    </div>
+
+    <div class="card-container">
+
+      <div class="card">
+        <h3>Ancient Period</h3>
+        <p>
+          Konkan has been known since the 3rd century CE 
+          as Aparanta and was ruled by dynasties like Mauryas and Satavahanas.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Maratha Empire</h3>
+        <p>
+          The Konkan coast played an important role in the Maratha Empire and was
+           protected by many sea forts.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Portuguese Influence</h3>
+        <p>
+          Portuguese culture influenced many coastal regions, 
+          especially around Goa and nearby areas.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- GALLERY -->
+
+  <section id="gallery">
+
+    <div class="section-title">
+      <h2>Konkan Gallery</h2>
+      <p>Beautiful views from Konkan region</p>
+    </div>
+
+    <div class="gallery">
+
+      <img src="https://media.istockphoto.com/id/1181631751/photo/landscape-konkan.jpg?s=612x612&w=0&k=20&c=wMxKCyDznkFDxNrfja93jL7TT84qCUtMD0IEMKnZnRE=">
+
+      <img src="https://media.istockphoto.com/id/1363830249/photo/panoramic-view-of-fishermans-boats-at-someshwar-creek-near-fishermen-colony-bhatia-bridge-and.jpg?s=612x612&w=0&k=20&c=O02JG4bP3hYzukSnZb_zTI8X-DeQF5qYcxAuowPQYw0=">
+
+      <img src="https://media.istockphoto.com/id/1363828634/photo/beautiful-sunset-or-sunrise-with-colorful-sky-at-devghali-or-kasheli-beach.jpg?s=612x612&w=0&k=20&c=L3ryg-BYRq2vX8FWMxCc6VQ-BedSW3vrEKHAJnNo5j8=">
+
+      <img src="https://media.istockphoto.com/id/1134425167/photo/nivti-rock-and-nivti-beach-sindhudurg-maharashtra-india.jpg?s=612x612&w=0&k=20&c=P_6GAvINSNxL0U8DpyZeacB6brEh4kS-KLZ5F-TLIPQ=">
+
+    </div>
+
+  </section>
+
+  <!-- POPULAR PLACES -->
+
+  <section id="places" style="background:#fff3e8;">
+
+    <div class="section-title">
+      <h2>Popular Places</h2>
+      <p>Must visit places in Konkan</p>
+    </div>
+
+    <div class="card-container">
+
+      <div class="card">
+        <h3>Ganpatipule</h3>
+        <p>Famous for beaches and Ganpati temple.</p>
+      </div>
+
+      <div class="card">
+        <h3>Tarkarli</h3>
+        <p>Known for scuba diving and crystal clear water.</p>
+      </div>
+
+      <div class="card">
+        <h3>Sindhudurg Fort</h3>
+        <p>A historic sea fort built by Chhatrapati Shivaji Maharaj.</p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CONTACT -->
+
+  <section id="contact">
+
+    <div class="section-title">
+      <h2>Contact</h2>
+      <p>Learn more about Konkan tourism</p>
+    </div>
+
+    <div style="text-align:center;">
+      <a href="https://www.google.com/" class="btn" target="_blank">
+        Search More on Google
+      </a>
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+    <p>
+      Designed by <strong>Neha Gaikwad</strong> ❤️🌷🎀
+
+    </p>
+    <p>Explore the beauty of Konkan</p>
+  </footer>
+
+</body>
+</html>
